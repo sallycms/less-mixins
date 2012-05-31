@@ -6,7 +6,7 @@
  *
  * @type Mixin
  */
-@reset {
+.reset() {
 	margin: 0;
 	padding: 0;
 }
@@ -18,7 +18,7 @@
  *
  * @type Mixin
  */
-@reset-box {
+.reset-box() {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -31,7 +31,7 @@
  *
  * @type Mixin
  */
-@reset-all {
+.reset-all() {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -43,12 +43,12 @@
 	vertical-align: baseline;
 }
 
-@global-reset {
+.global-reset() {
 	html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote,
 	pre,a, abbr, acronym, address, code,del, dfn, em, img, q, dl, dt, dd, ol, ul,
 	li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {
-		@high-quality;
-		@reset-all;
+		.high-quality;
+		.reset-all;
 	}
 
 	table {
@@ -74,7 +74,7 @@
 	}
 
 	a img { border: none; }
-	img { @high-quality; }
+	img { .high-quality; }
 
 	pre, code, kbd, samp, var, output {
 		white-space: pre;
@@ -85,7 +85,7 @@
 	}
 }
 
-@html5-reset {
+.html5-reset() {
 	nav, section, article, header, aside, footer, figure, dialog { display: block; }
 	time, progress, mark, output { display: inline; }
 }

@@ -21,7 +21,7 @@
 // @mixin box-sizing
 // @mixin user-select
 // @mixin appearance
-// 
+//
 // Decoration:
 // @mixin border-radius
 // @mixin box-shadow
@@ -59,7 +59,7 @@
 //
 //============================================================
 
-.display-box(...) {
+.display-box() {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-box;
@@ -82,13 +82,13 @@
 //
 //============================================================
 
-.box-orient(...) {
-    .display-box();
-    -webkit-box-orient: @arguments;
-       -moz-box-orient: @arguments;
-        -ms-box-orient: @arguments;
-         -o-box-orient: @arguments;
-            box-orient: @arguments;
+.box-orient(@value) {
+    .display-box;
+    -webkit-box-orient: @value;
+       -moz-box-orient: @value;
+        -ms-box-orient: @value;
+         -o-box-orient: @value;
+            box-orient: @value;
 }
 
 
@@ -107,13 +107,13 @@
 //
 //============================================================
 
-.box-pack(...) {
-    .display-box();
-    -webkit-box-pack: @arguments;
-       -moz-box-pack: @arguments;
-        -ms-box-pack: @arguments;
-         -o-box-pack: @arguments;
-            box-pack: @arguments;
+.box-pack(@value) {
+    .display-box;
+    -webkit-box-pack: @value;
+       -moz-box-pack: @value;
+        -ms-box-pack: @value;
+         -o-box-pack: @value;
+            box-pack: @value;
 }
 
 
@@ -133,13 +133,13 @@
 //
 //============================================================
 
-.box-align(...) {
-    .display-box();
-    -webkit-box-align: @arguments;
-       -moz-box-align: @arguments;
-        -ms-box-align: @arguments;
-         -o-box-align: @arguments;
-            box-align: @arguments;
+.box-align(@value) {
+    .display-box;
+    -webkit-box-align: @value;
+       -moz-box-align: @value;
+        -ms-box-align: @value;
+         -o-box-align: @value;
+            box-align: @value;
 }
 
 
@@ -155,13 +155,13 @@
 //
 //============================================================
 
-.box-flex(...) {
-    .display-box();
-    -webkit-box-flex: @arguments;
-       -moz-box-flex: @arguments;
-        -ms-box-flex: @arguments;
-         -o-box-flex: @arguments;
-            box-flex: @arguments;
+.box-flex(@value) {
+    .display-box;
+    -webkit-box-flex: @value;
+       -moz-box-flex: @value;
+        -ms-box-flex: @value;
+         -o-box-flex: @value;
+            box-flex: @value;
 }
 
 
@@ -179,10 +179,10 @@
 //
 //============================================================
 
-.box-sizing(...) {
-    -webkit-box-sizing: @arguments;
-       -moz-box-sizing: @arguments;
-            box-sizing: @arguments;
+.box-sizing(@sizing) {
+    -webkit-box-sizing: @sizing;
+       -moz-box-sizing: @sizing;
+            box-sizing: @sizing;
 }
 
 
@@ -203,13 +203,13 @@
 //
 //============================================================
 
-.user-select(...) {
-    -webkit-touch-callout: @arguments;
-      -webkit-user-select: @arguments;
-         -moz-user-select: @arguments;
-          -ms-user-select: @arguments;
-           -o-user-select: @arguments;
-              user-select: @arguments;
+.user-select(@value) {
+    -webkit-touch-callout: @value;
+      -webkit-user-select: @value;
+         -moz-user-select: @value;
+          -ms-user-select: @value;
+           -o-user-select: @value;
+              user-select: @value;
 }
 
 
@@ -239,12 +239,12 @@
 //
 //============================================================
 
-.appearance(...) {
-    -webkit-appearance: @arguments;
-       -moz-appearance: @arguments;
-        -ms-appearance: @arguments;
-         -o-appearance: @arguments;
-            appearance: @arguments;
+.appearance(@value) {
+    -webkit-appearance: @value;
+       -moz-appearance: @value;
+        -ms-appearance: @value;
+         -o-appearance: @value;
+            appearance: @value;
 }
 
 
@@ -262,10 +262,10 @@
 //
 //============================================================
 
-.border-radius(...) {
-      -webkit-border-radius: @arguments;
-         -moz-border-radius: @arguments;
-              border-radius: @arguments;
+.border-radius(@radius) {
+      -webkit-border-radius: @radius;
+         -moz-border-radius: @radius;
+              border-radius: @radius;
 
     -webkit-background-clip: padding-box;
        -moz-background-clip: padding;
@@ -283,13 +283,12 @@
 // @param vertical-offset     :  px, em
 // @param blur-radius         :  px, em
 // @param spread-distance     :  px, em
-// @param inset               :  inset
 //
 // @see http://www.w3.org/TR/css3-background/#box-shadow
 //
 //============================================================
 
-.box-shadow(...) {
+.box-shadow(@color, @hoffset: 0, @voffset: 0, @bradius: 0, @distance: 0) {
     -webkit-box-shadow: @arguments;
        -moz-box-shadow: @arguments;
             box-shadow: @arguments;
@@ -310,7 +309,7 @@
 //
 //============================================================
 
-.text-shadow(...) {
+.text-shadow(@color, @hoffset: 0, @voffset: 0, @bradius: 0) {
     text-shadow: @arguments;
 }
 
@@ -331,7 +330,7 @@
 //
 //============================================================
 
-.linear-gradient(...) {
+.linear-gradient(@angle, @colorA, @colorB, @colorC) {
     background-image: -webkit-linear-gradient(@arguments);
     background-image: -moz-linear-gradient(@arguments);
     background-image: -ms-linear-gradient(@arguments);
@@ -357,7 +356,7 @@
 //
 //============================================================
 
-.radial-gradient(...) {
+.radial-gradient(@location, @shape, @colorA, @colorB, @colorC) {
     background-image: -webkit-radial-gradient(@arguments);
     background-image: -moz-radial-gradient(@arguments);
     background-image: -ms-radial-gradient(@arguments);
@@ -381,7 +380,7 @@
 //
 //============================================================
 
-.transform(...) {
+.transform(@function) {
     -webkit-transform: @arguments;
        -moz-transform: @arguments;
         -ms-transform: @arguments;
@@ -406,7 +405,7 @@
 //
 //============================================================
 
-.transform-origin(...) {
+.transform-origin(@origin) {
     -webkit-transform-origin: @arguments;
        -moz-transform-origin: @arguments;
         -ms-transform-origin: @arguments;
@@ -426,7 +425,7 @@
 //
 //============================================================
 
-.transform-style(...) {
+.transform-style(@style) {
     -webkit-transform-style: @arguments;
        -moz-transform-style: @arguments;
         -ms-transform-style: @arguments;
@@ -446,7 +445,7 @@
 //
 //============================================================
 
-.perspective(...) {
+.perspective(@perspective) {
     -webkit-perspective: @arguments;
        -moz-perspective: @arguments;
         -ms-perspective: @arguments;
@@ -471,7 +470,7 @@
 //
 //============================================================
 
-.perspective-origin(...) {
+.perspective-origin(@origin) {
     -webkit-perspective-origin: @arguments;
        -moz-perspective-origin: @arguments;
         -ms-perspective-origin: @arguments;
@@ -491,7 +490,7 @@
 //
 //============================================================
 
-.backface-visibility(...) {
+.backface-visibility(@visibility) {
     -webkit-backface-visibility: @arguments;
        -moz-backface-visibility: @arguments;
         -ms-backface-visibility: @arguments;
@@ -516,7 +515,7 @@
 //
 //============================================================
 
-.matrix(...) {
+.matrix(@a, @b, @c, @d, @e, @f) {
     -webkit-transform: matrix(@arguments);
        -moz-transform: matrix(@arguments);
         -ms-transform: matrix(@arguments);
@@ -537,7 +536,7 @@
 //
 //============================================================
 
-.translate(...) {
+.translate(@x, @y) {
     -webkit-transform: translate(@arguments);
        -moz-transform: translate(@arguments);
         -ms-transform: translate(@arguments);
@@ -558,7 +557,7 @@
 //
 //============================================================
 
-.scale(...) {
+.scale(@x, @y) {
     -webkit-transform: scale(@arguments);
        -moz-transform: scale(@arguments);
         -ms-transform: scale(@arguments);
@@ -578,7 +577,7 @@
 //
 //============================================================
 
-.rotate(...) {
+.rotate(@angle) {
     -webkit-transform: rotate(@arguments);
        -moz-transform: rotate(@arguments);
         -ms-transform: rotate(@arguments);
@@ -599,7 +598,7 @@
 //
 //============================================================
 
-.skew(...) {
+.skew(@x, @y) {
     -webkit-transform: skew(@arguments);
        -moz-transform: skew(@arguments);
         -ms-transform: skew(@arguments);
@@ -622,7 +621,7 @@
 //
 //============================================================
 
-.transition(...) {
+.transition(@props, @duration, @delay, @easing) {
     -webkit-transition: @arguments;
        -moz-transition: @arguments;
         -ms-transition: @arguments;
@@ -691,27 +690,27 @@
 //
 // Copyright (c) 2012 Matthew Wagerfield
 //
-// Permission is hereby granted, free of charge, to any 
-// person obtaining a copy of this software and associated 
-// documentation files (the "Software"), to deal in the 
-// Software without restriction, including without limitation 
+// Permission is hereby granted, free of charge, to any
+// person obtaining a copy of this software and associated
+// documentation files (the "Software"), to deal in the
+// Software without restriction, including without limitation
 // the rights to use, copy, modify, merge, publish, distribute,
-// sublicense, and/or sell copies of the Software, and to 
-// permit persons to whom the Software is furnished to do 
+// sublicense, and/or sell copies of the Software, and to
+// permit persons to whom the Software is furnished to do
 // so, subject to the following conditions:
 //
-// The above copyright notice and this permission notice 
-// shall be included in all copies or substantial portions 
+// The above copyright notice and this permission notice
+// shall be included in all copies or substantial portions
 // of the Software.
 //
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY 
-// OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT 
-// LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS 
-// FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO 
-// EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE 
-// FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN 
-// AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY
+// OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+// LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+// FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+// EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+// FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+// AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
 // OR OTHER DEALINGS IN THE SOFTWARE.
 //
 //============================================================

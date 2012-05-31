@@ -8,7 +8,7 @@
  * @see  http://www.satzansatz.de/cssd/onhavinglayout.html
  * @type Mixin
  */
-@has-layout {
+.has-layout() {
 	zoom: 1;
 }
 
@@ -17,7 +17,7 @@
  *
  * Clears an element of its floated children. The quick way.
  */
-@clear {
+.clear() {
 	overflow: auto;
 }
 
@@ -26,8 +26,8 @@
  *
  * Clears an element of its floated children.
  */
-@clearfix {
-	@has-layout;
+.clearfix() {
+	.has-layout;
 	display: block;
 
 	&:after {

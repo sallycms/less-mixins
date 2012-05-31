@@ -3,7 +3,7 @@
  * Useful mainly in flat color images
  * @see https://developer.mozilla.org/en/CSS/image-rendering
  */
-@sharpen {
+.sharpen() {
 	image-rendering:-moz-crisp-edges;
 	-ms-interpolation-mode:nearest-neighbor;  /* IE 7+ */
 }
@@ -14,7 +14,7 @@
  * Use the +sharpen mixin instead.
  * @see https://developer.mozilla.org/en/CSS/image-rendering
  */
-@high-quality {
+.high-quality() {
 	image-rendering:optimizeQuality;
 	-ms-interpolation-mode:bicubic;  /* IE 7+ */
 }
@@ -23,6 +23,6 @@
  * Optimizes the rendering on images so they
  * appear faster, but at a lower quality. Useful for <video>
  */
-@low-quality {
+.low-quality() {
 	image-rendering:optimizeSpeed;
 }
