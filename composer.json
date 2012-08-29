@@ -1,17 +1,26 @@
 {
-	"name": "sallycms/less-mixins",
-	"description": "Collection of shared LESS mixins for all apps and addOns.",
-	"keywords": ["css", "less", "lesscss", "lessphp", "mixin"],
-	"authors": [{
-		"name": "Matthew Wagerfield",
-		"homepage": "https://github.com/MatthewWagerfield"
-	}, {
-		"name": "webvariants GbR",
-		"homepage": "http://www.webvariants.de/"
-	}],
-	"homepage": "http://www.sallycms.de/",
-	"license": "MIT",
-	"suggest": {
-		"leafo/lessphp": "MIT licensed LESS compiler, written in PHP."
-	}
+    "name": "sallycms/less-mixins",
+    "description": "Collection of shared LESS mixins for all apps and addOns.",
+    "keywords": [
+        "css",
+        "less",
+        "lesscss",
+        "lessphp",
+        "mixin"
+    ],
+    "authors": [
+        {
+            "name": "Matthew Wagerfield",
+            "homepage": "https://github.com/MatthewWagerfield"
+        },
+        {
+            "name": "webvariants GbR",
+            "homepage": "http://www.webvariants.de/"
+        }
+    ],
+    "homepage": "http://www.sallycms.de/",
+    "license": "MIT",
+    "suggest": {
+        "leafo/lessphp": "MIT licensed LESS compiler, written in PHP."
+    }
 }
