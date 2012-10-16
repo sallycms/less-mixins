@@ -714,3 +714,12 @@
 // OR OTHER DEALINGS IN THE SOFTWARE.
 //
 //============================================================
+
+.opacity(@opacity:1) {
+	@freaking-ie: @opacity * 100;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{freaking-ie})";
+	-webkit-opacity: @opacity;
+	-khtml-opacity: @opacity;
+	-moz-opacity: @opacity;
+	opacity: @opacity;
+}
