@@ -22,5 +22,10 @@
     "license": "MIT",
     "suggest": {
         "leafo/lessphp": "MIT licensed LESS compiler, written in PHP."
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-default": "2.x-dev"
+        }
     }
 }
